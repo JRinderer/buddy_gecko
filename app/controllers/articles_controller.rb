@@ -19,10 +19,6 @@ class ArticlesController < ApplicationController
 
   end
 
-  def article_params
-    params.require(:article).permit(:search)
-  end
-
   def new
     @article = Article.new
   end
@@ -52,12 +48,12 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    puts "yo yo yo"
     @article = Article.find(params[:id])
     @article.destroy
 
     redirect_to root_path, status: :see_other
   end
-
   private
 
   def article_params
