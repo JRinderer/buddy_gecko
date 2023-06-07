@@ -4,6 +4,7 @@ class ArticlesController < ApplicationController
   end
 
   def search
+    puts params[:search]
     @article = Article.search(params[:search])
   end
 
