@@ -1,0 +1,8 @@
+View --- we can just copy the view we have.
+
+Routes --- we need to modify routes to go to new controllers/places
+
+Model --- we need a student model
+
+controllers --- we need a student controller
+

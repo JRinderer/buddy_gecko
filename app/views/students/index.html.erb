@@ -1,0 +1,20 @@
+<h1>Students</h1>
+
+<h2>Search For Student</h2>
+
+<%= form_tag(search_path, method: :get) do %>
+  <%= text_field_tag(:search, params[:seach]) %>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<ul>
+  <% @students.each do |student| %>
+    <li>
+      <a href="<%= student_path(student) %>">
+        <%= student.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Student", new_student_path %>
